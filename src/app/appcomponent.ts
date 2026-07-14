@@ -15,7 +15,7 @@ export class AppComponent {
   mensagem: string = 'Eu sou desenvolvedor senior!';
   nome: string = 'Anderson Freires';
   idade: number = 47;
-  imagem: string = 'carnival.jpg';
+  imagem: string = 'images.png';
   off: boolean = false;
   cor: string = 'green';
 }
