@@ -1,6 +1,17 @@
 <h1>{{ mensagem }}</h1>
 <h2>{{ nome }}</h2>
 
+
+<mat-card style="text-align: center; margin: 40px; padding: 30px;">
+  <h1>{{ contador }}</h1>
+
+  <button mat-raised-button color="primary" (click)="somar()"> + </button>
+  <button mat-raised-button color="accent" (click)="diminuir()"> - </button>
+  <button mat-raised-button color="warn" (click)="zerar()"> Zerar </button>
+  <button mat-raised-button color="primary" (click)="dobrar()"> x2 </button>
+</mat-card>
+
+
 <h3>Daqui 5 anos: {{ idade + 5 }}</h3>
 
 <p>Engenharia Computação</p>
