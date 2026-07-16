@@ -1,5 +1,13 @@
 <h1>{{ mensagem }}</h1>
-<h2>{{ nome }}</h2>
+<input [(ngModel)]="nome">
+<input [(ngModel)]="cidade">
+<input   type="number" [(ngModel)]="idade">
+
+
+<h2>Hello, {{ nome }}</h2>
+<h2>Idade: {{idade}}</h2>
+<p>In 5 years:{{idade +5}} old</p>
+<h2>Cidade:{{cidade}}</h2>
 
 
 <mat-card style="text-align: center; margin: 40px; padding: 30px;">
@@ -9,6 +17,10 @@
   <button mat-raised-button color="accent" (click)="diminuir()"> - </button>
   <button mat-raised-button color="warn" (click)="zerar()"> Zerar </button>
   <button mat-raised-button color="primary" (click)="dobrar()"> x2 </button>
+
+  <button (click)="somarCinco()">
+  Somar + 5
+</button>
 </mat-card>
 
 
@@ -23,3 +35,6 @@
 <button [disabled]="off">Salvar</button>
 
 <p [style.color]="cor">Desenvolver de sistemas</p>
+
+
+
