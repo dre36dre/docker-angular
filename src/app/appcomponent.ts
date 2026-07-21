@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,12 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.css']
 })
 export class AppComponent {
+ nome: string = "";
+
+
+
   contador = 0;
-  nome="Anderson";
+
   cidade="São Paulo";
   somar() { this.contador++; }
   diminuir() { this.contador--; }
@@ -21,6 +26,14 @@ export class AppComponent {
 
 somarCinco(){
  this.contador+=5;
+}
+
+
+atualizaMensagem(){
+  this.mensagem=
+  'Hello ${this.nome}
+  Age: ${this.idade}
+  City: ${this.cidade}';
 }
 
 

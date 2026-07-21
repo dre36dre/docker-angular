@@ -1,14 +1,16 @@
 <h1>{{ mensagem }}</h1>
-<input [(ngModel)]="nome">
-<input [(ngModel)]="cidade">
-<input   type="number" [(ngModel)]="idade">
+<input [(ngModel)]="nome" placeholder="Type your name">
+<input [(ngModel)]="cidade"  placeholder="Type your city">
+<input   type="number" [(ngModel)]="idade" placeholder="Type your age">
 
-
+<h3>Bom dia  {{nome}} </h3>
 <h2>Hello, {{ nome }}</h2>
 <h2>Idade: {{idade}}</h2>
 <p>In 5 years:{{idade +5}} old</p>
 <h2>Cidade:{{cidade}}</h2>
 
+
+<input [(ngModel)]="nome">
 
 <mat-card style="text-align: center; margin: 40px; padding: 30px;">
   <h1>{{ contador }}</h1>
@@ -35,6 +37,25 @@
 <button [disabled]="off">Salvar</button>
 
 <p [style.color]="cor">Desenvolver de sistemas</p>
+
+<label>Name</label>
+
+<input
+    [([(ngModel)]="nome"
+    (ngModelChange)="atualizaMensagem()"
+    placeholder="Type your name">
+
+
+<input
+ [[(ngModel)]="idade"
+ (ngModelChange)="atualizaMensagem()"
+ placeholder="Type your name">
+
+
+<input
+ [[(ngModel)]="cidade"
+ (ngModelChange)="atualizaMensagem()"
+ placeholder="Type your cidade">
 
 
 
