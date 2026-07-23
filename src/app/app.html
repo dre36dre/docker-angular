@@ -1,16 +1,22 @@
+<button (click)="mostrar = !mostrar">Toggle</button>
+
+@if (mostrar) {
+  <h1>Angular is amazing</h1>
+}@else {
+  <h2>I'm Rich!</h2>
+}
+
 <h1>{{ mensagem }}</h1>
-<input [(ngModel)]="nome" placeholder="Type your name">
-<input [(ngModel)]="cidade"  placeholder="Type your city">
-<input   type="number" [(ngModel)]="idade" placeholder="Type your age">
 
-<h3>Bom dia  {{nome}} </h3>
+<input [(ngModel)]="nome" (ngModelChange)="atualizaMensagem()" placeholder="Type your name">
+<input [(ngModel)]="cidade" (ngModelChange)="atualizaMensagem()" placeholder="Type your city">
+<input type="number" [(ngModel)]="idade" (ngModelChange)="atualizaMensagem()" placeholder="Type your age">
+
+<h3>Bom dia {{ nome }}</h3>
 <h2>Hello, {{ nome }}</h2>
-<h2>Idade: {{idade}}</h2>
-<p>In 5 years:{{idade +5}} old</p>
-<h2>Cidade:{{cidade}}</h2>
-
-
-<input [(ngModel)]="nome">
+<h2>Idade: {{ idade }}</h2>
+<p>In 5 years: {{ idade + 5 }} old</p>
+<h2>Cidade: {{ cidade }}</h2>
 
 <mat-card style="text-align: center; margin: 40px; padding: 30px;">
   <h1>{{ contador }}</h1>
@@ -19,43 +25,11 @@
   <button mat-raised-button color="accent" (click)="diminuir()"> - </button>
   <button mat-raised-button color="warn" (click)="zerar()"> Zerar </button>
   <button mat-raised-button color="primary" (click)="dobrar()"> x2 </button>
-
-  <button (click)="somarCinco()">
-  Somar + 5
-</button>
+  <button (click)="somarCinco()">Somar + 5</button>
 </mat-card>
-
-
-<h3>Daqui 5 anos: {{ idade + 5 }}</h3>
-
-<p>Engenharia Computação</p>
-
-<a href="">Muito obrigado Deus</a>
 
 <img [src]="imagem" width="600">
 
 <button [disabled]="off">Salvar</button>
 
-<p [style.color]="cor">Desenvolver de sistemas</p>
-
-<label>Name</label>
-
-<input
-    [([(ngModel)]="nome"
-    (ngModelChange)="atualizaMensagem()"
-    placeholder="Type your name">
-
-
-<input
- [[(ngModel)]="idade"
- (ngModelChange)="atualizaMensagem()"
- placeholder="Type your name">
-
-
-<input
- [[(ngModel)]="cidade"
- (ngModelChange)="atualizaMensagem()"
- placeholder="Type your cidade">
-
-
-
+<p [style.color]="cor">Desenvolvedor de sistemas</p>
